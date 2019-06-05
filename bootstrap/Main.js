@@ -7,6 +7,6 @@ routes.forEach(item => {
   let controller = _.use(`app/Controllers/${item.controller}`);
   http.route(item.path, item.method, (req, res) => { new controller(req, res) });
 });
-http.start(8099);
+http.start(_.env.port);
 App.prototype.io = http.io;
 App.prototype.axios = axios;
