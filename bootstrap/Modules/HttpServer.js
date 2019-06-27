@@ -9,6 +9,7 @@ module.exports = class HttpServer {
     this.io = socketIo(this.server);
     this.app.use(bodyParser.json());
     this.app.use(bodyParser.urlencoded({ extended: true }));
+    this.app.use(express.static('dist', { extensions: ['html', 'htm'] }));
   }
   middleware(fn) {
     this.app.use('*', fn);
