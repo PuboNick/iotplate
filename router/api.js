@@ -1,3 +1,3 @@
 module.exports = [
-  { path: '/', method: 'get', controller: 'demo' }
+  { path: '/', method: 'get', controller: 'Demo' }
 ]
