@@ -1,4 +1,4 @@
 global._ = {};
-_.use = path => require(`./${path}`);
-_.env = _.use('config');
-_.use('bootstrap/Main');
+_.use = path => require('./' + path);
+_.env = _.use('app.config');
+_.use('bootstrap/App');
